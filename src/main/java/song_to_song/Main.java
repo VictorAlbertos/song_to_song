@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Artist data = new Artist();
 
         Scanner input = new Scanner(System.in);
 
@@ -13,11 +12,10 @@ public class Main {
 
         System.out.println("Enter the artist first name: ");
         String name = input.nextLine();
-        data.setFirstName(name);
         System.out.println("Enter the artist last name: ");
         String last = input.nextLine();
-        data.setLastName(last);
 
-        data.displayFullName();
+        Artist data = new Artist(name, last);
+        System.out.print(data.displayFullName());
     }
 }
