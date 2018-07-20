@@ -15,6 +15,7 @@ public class Main {
         String last = input.nextLine();
 
         Artist data = new Artist(name, last);
-        data.displayFullName();
+
+        System.out.println(data.displayFullName());
     }
 }
