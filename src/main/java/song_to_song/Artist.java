@@ -1,28 +1,24 @@
 package song_to_song;
 
 public class Artist {
+    private final String artistName, artistLastName;
 
-    private String artistName, artistLastName;
-
-    public void setFirstName(String first){
-        artistName = first;
+    public Artist(String artistName, String artistLastName) {
+        this.artistName = artistName;
+        this.artistLastName = artistLastName;
     }
 
-    public String getFirstName(){
+
+    public String getFirstName() {
         return artistName;
     }
 
-    public void setLastName(String last) {
-        artistLastName = last;
-    }
 
-    public String getLastName(){
+    public String getLastName() {
         return artistLastName;
     }
 
-    public void displayFullName(){
-        System.out.printf("\nThe artist name is: %s, %s",
-                getLastName(), getFirstName());
+    public String displayFullName() {
+        return String.format("The artist name is: %s, %s", getLastName(), getFirstName());
     }
-
 }
