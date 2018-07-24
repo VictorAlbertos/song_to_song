@@ -17,6 +17,10 @@ public class Artist {
         return artistLastName;
     }
 
+    public String getFullName(){
+        return (artistName + artistLastName);
+    }
+
     public String displayFullName() {
         return String.format("The artist name is: %s, %s", getLastName(), getFirstName());
     }

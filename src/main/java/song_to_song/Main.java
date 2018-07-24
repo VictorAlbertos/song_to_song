@@ -17,5 +17,15 @@ public class Main {
 
         Artist data = new Artist(name, last);
         System.out.print(data.displayFullName());
+
+        System.out.println("Enter the song name: ");
+        String songName = input.nextLine();
+        System.out.println("Enter the song description: ");
+        String description = input.nextLine();
+        System.out.println("Enter the song duration: ");
+        double duration = input.nextDouble();
+
+
+        Song songData = new Song(songName, description, duration );
     }
 }
