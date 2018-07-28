@@ -4,7 +4,7 @@ public class Song {
 
     private final String songName, songDescription;
     private final double songDuration;
-    private Artist name;
+    private final Artist artist;
 
     public Song(String songName, String songDescription, double songDuration, Artist artist){
         this.songName = songName;
@@ -21,9 +21,11 @@ public class Song {
         return songDescription;
     }
 
-    public double getSongDuration(){
+    public double getSongDuration() {
         return songDuration;
     }
 
-    Artist artist = new Artist();
+    public Artist getArtist() {
+        return artist;
+    }
 }
