@@ -14,6 +14,6 @@ public class Song {
 
 
     public String outputData() {
-        return String.format("songName: %s, songDescription: %s, songDuration: %s, artist: %s", songName, songDescription, songDuration, artist.fullName());
+        return String.format("songName: %s, songDescription: %s, songDuration: %s, %s", songName, songDescription, songDuration, artist.fullName());
     }
 }
