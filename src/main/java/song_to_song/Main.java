@@ -14,9 +14,9 @@ public class Main {
         String last = input.nextLine();
 
         Artist artist = new Artist(name, last);
-        System.out.print(artist.fullName());
+        System.out.println(artist.fullName());
 
-        System.out.println("Enter the song name: ");
+        System.out.println("\nEnter the song name: ");
         String songName = input.nextLine();
 
         System.out.println("Enter the song description: ");
@@ -27,5 +27,7 @@ public class Main {
 
 
         Song songData = new Song(songName, description, duration, artist);
+        System.out.println(songData.outputData());
+
     }
 }

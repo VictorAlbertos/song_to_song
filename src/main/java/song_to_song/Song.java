@@ -1,7 +1,6 @@
 package song_to_song;
 
 public class Song {
-
     private final String songName, songDescription;
     private final double songDuration;
     private final Artist artist;
@@ -13,19 +12,8 @@ public class Song {
         this.artist = artist;
     }
 
-    public String getSongName() {
-        return songName;
-    }
 
-    public String getSongDescription() {
-        return songDescription;
-    }
-
-    public double getSongDuration() {
-        return songDuration;
-    }
-
-    public Artist getArtist() {
-        return artist;
+    public String outputData() {
+        return String.format("songName: %s, songDescription: %s, songDuration: %s, artist: %s", songName, songDescription, songDuration, artist.fullName());
     }
 }
