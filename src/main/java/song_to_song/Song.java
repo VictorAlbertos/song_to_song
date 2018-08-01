@@ -16,4 +16,12 @@ public class Song {
         return String.format("songName: %s, songDescription: %s, songDuration: %s, %s",
                 songName, songDescription, songDuration, artist.fullName());
     }
+
+    public Artist getArtist(){
+        return artist;
+    }
+
+    public double getSongDuration(){
+        return songDuration;
+    }
 }
