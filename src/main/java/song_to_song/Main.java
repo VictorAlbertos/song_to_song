@@ -4,7 +4,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Artist artist = createArtist();
+        System.out.println(artist.fullName());
 
+        Song song = createSong(artist);
+        System.out.println(song.outputData());
+    }
+
+    private static Artist createArtist() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter the artist first name: ");
@@ -13,8 +20,11 @@ public class Main {
         System.out.println("Enter the artist last name: ");
         String last = input.nextLine();
 
-        Artist artist = new Artist(name, last);
-        System.out.println(artist.fullName());
+        return new Artist(name, last);
+    }
+
+    private static Song createSong(Artist artist){
+        Scanner input = new Scanner(System.in);
 
         System.out.println("\nEnter the song name: ");
         String songName = input.nextLine();
@@ -25,8 +35,6 @@ public class Main {
         System.out.println("Enter the song duration: ");
         double duration = input.nextDouble();
 
-
-        Song songData = new Song(songName, description, duration, artist);
-        System.out.print(songData.outputData());
+        return new Song(songName, description, duration, artist);
     }
 }
