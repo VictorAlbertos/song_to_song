@@ -9,16 +9,8 @@ public class Artist {
         this.artistLastName = artistLastName;
     }
 
-    public String getFirstName() {
-        return artistName;
-    }
-
-    public String getLastName() {
-        return artistLastName;
-    }
-
     public String fullName() {
-        return String.format("The artist name is: %s, %s", getLastName(), getFirstName());
+        return String.format("artistName: %s, artistLastName: %s", artistName, artistLastName);
     }
 
 }
