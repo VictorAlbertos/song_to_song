@@ -9,12 +9,8 @@ public class Main {
         boolean closeProgram = false;
         while (!closeProgram) {
 
-            int choice;
-            Scanner keyboard = new Scanner(System.in);
-
-            System.out.println("\nEnter your choice for adding data (1 - Artist, 2 - Song, 3 - Album) or 0 to close program: ");
-            choice = keyboard.nextInt();
-
+            int choice = ConsoleUtils.askForNumber(
+                    "\nEnter your choice for adding data (1 - Artist, 2 - Song, 3 - Album) or 0 to close program: ");
             switch (choice) {
                 case 0:
                     closeProgram = true;
